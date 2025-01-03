@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-1: #DEE1DB;
+    --color-2: #C4CDC1;
+    --color-3: #99AEAD;
+    --color-4: #6D9197;
+    --color-5: #658B6F;
+    --color-6: #2F575D;
+    --color-7: #28363D;
+    --text-color: #28363D;
+    --background-color: #f8f9fa;
+    --card-background: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--color-6);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.graphs {
+    margin-bottom: 3rem;
+}
+
+.graph-container {
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.graph-container:hover {
+    transform: translateY(-2px);
+}
+
+.graph-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--color-6);
+    font-weight: 500;
+}
+
+.analysis {
+    background: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    color: var(--color-6);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-7);
+    font-weight: 300;
+}
+
+.sector-grid, .challenge-grid, .recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sector-card, .challenge-card, .recommendation-card {
+    background: var(--card-background);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid var(--color-1);
+    transition: transform 0.2s ease;
+}
+
+.sector-card:hover, .challenge-card:hover, .recommendation-card:hover {
+    transform: translateY(-2px);
+}
+
+h4 {
+    color: var(--color-6);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-4);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-7);
+    color: white;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .sector-grid, .challenge-grid, .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+}
